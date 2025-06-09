@@ -9,7 +9,7 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Logger } from '@nestjs/common';
 
-import { TRequestTemplateTypeKeys } from '@localzet/backend-contract';
+import { TRequestTemplateTypeKeys } from '@localzet/aura-backend-contract';
 
 import { AxiosService } from '@common/axios/axios.service';
 import { sanitizeUsername } from '@common/utils';

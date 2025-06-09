@@ -73,7 +73,7 @@ export default defineConfig({
                         '@mantine/nprogress',
                         '@mantine/notifications',
                         '@mantine/modals',
-                        '@localzet/backend-contract'
+                        '@localzet/aura-backend-contract'
                     ],
                     i18n: ['i18next', 'i18next-http-backend', 'i18next-browser-languagedetector'],
                     motion: ['framer-motion']

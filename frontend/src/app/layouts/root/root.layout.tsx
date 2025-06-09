@@ -1,4 +1,4 @@
-import { GetSubscriptionInfoByShortUuidCommand } from '@localzet/backend-contract'
+import { GetSubscriptionInfoByShortUuidCommand } from '@localzet/aura-backend-contract'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 

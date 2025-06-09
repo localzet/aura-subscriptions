@@ -12,7 +12,7 @@ import {
     GetSubscriptionInfoByShortUuidCommand,
     GetUserByUsernameCommand,
     TRequestTemplateTypeKeys,
-} from '@localzet/backend-contract';
+} from '@localzet/aura-backend-contract';
 
 import { ICommandResponse } from '../types/command-response.type';
 

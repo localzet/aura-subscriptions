@@ -5,7 +5,7 @@ import { Get, Controller, Res, Req, Param, Logger } from '@nestjs/common';
 import {
     REQUEST_TEMPLATE_TYPE_VALUES,
     TRequestTemplateTypeKeys,
-} from '@localzet/backend-contract';
+} from '@localzet/aura-backend-contract';
 
 import { RootService } from './root.service';
 
