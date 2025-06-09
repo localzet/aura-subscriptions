@@ -1,0 +1,17 @@
+services:
+  aura-subscriptions:
+    image: localzet/aura-subscriptions:latest
+    container_name: aura-subscriptions
+    hostname: aura-subscriptions
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - '127.0.0.1:3010:3010'
+    networks:
+      - aura-network
+
+networks:
+  aura-network:
+    driver: bridge
+    external: true
