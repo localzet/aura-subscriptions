@@ -23,12 +23,6 @@
       "@modules/*": [
         "./src/modules/*"
       ],
-      "@libs/contracts/*": [
-        "./libs/contract/*"
-      ],
-      "@contract/*": [
-        "./libs/contract/*"
-      ],
       "@queue/*": [
         "./src/queue/*"
       ],
