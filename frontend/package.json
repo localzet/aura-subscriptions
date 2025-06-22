@@ -1,6 +1,6 @@
 {
   "name": "@localzet/aura-subscriptions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aura Subscriptions",
   "private": false,
   "type": "module",
