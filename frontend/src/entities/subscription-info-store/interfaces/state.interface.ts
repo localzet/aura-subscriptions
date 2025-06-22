@@ -1,4 +1,4 @@
-import { GetSubscriptionInfoByShortUuidCommand } from '@localzet/aura-backend-contract'
+import { GetSubscriptionInfoByShortUuidCommand } from '@localzet/aura-contract'
 
 export interface IState {
     subscription: GetSubscriptionInfoByShortUuidCommand.Response['response'] | null

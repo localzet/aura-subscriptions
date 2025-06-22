@@ -9,7 +9,7 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Logger } from '@nestjs/common';
 
-import { TRequestTemplateTypeKeys } from '@localzet/aura-backend-contract';
+import { TRequestTemplateTypeKeys } from '@localzet/aura-contract';
 
 import { AxiosService } from '@common/axios/axios.service';
 import { sanitizeUsername } from '@common/utils';
@@ -50,13 +50,13 @@ export class RootService {
                     const sanitizedUsername = sanitizeUsername(username.username);
 
                     this.logger.log(
-                        `Decoded Marzban username: ${username.username}, sanitized username: ${sanitizedUsername}`,
+                        `Раскодировано имя пользователя Marzban: ${username.username}, очищенное имя: ${sanitizedUsername}`,
                     );
 
                     const userInfo = await this.axiosService.getUserByUsername(sanitizedUsername);
                     if (!userInfo.isOk || !userInfo.response) {
                         this.logger.error(
-                            `Decoded Marzban username is not found in Aura, decoded username: ${sanitizedUsername}`,
+                            `Раскодированное имя пользователя Marzban не найдено в Aura, имя: ${sanitizedUsername}`,
                         );
 
                         res.socket?.destroy();
@@ -101,7 +101,7 @@ export class RootService {
 
             res.status(200).send(subscriptionDataResponse.response);
         } catch (error) {
-            this.logger.error('Error in serveSubscriptionPage', error);
+            this.logger.error('Ошибка в serveSubscriptionPage', error);
 
             res.socket?.destroy();
             return;
@@ -140,7 +140,7 @@ export class RootService {
             const subscriptionDataResponse = await this.axiosService.getSubscriptionInfo(shortUuid);
 
             if (!subscriptionDataResponse.isOk) {
-                this.logger.error(`Get subscription info failed, shortUuid: ${shortUuid}`);
+                this.logger.error(`Получение информации о подписке не удалось, shortUuid: ${shortUuid}`);
 
                 res.socket?.destroy();
                 return;
@@ -164,7 +164,7 @@ export class RootService {
                 panelData: Buffer.from(JSON.stringify(subscriptionData)).toString('base64'),
             });
         } catch (error) {
-            this.logger.error('Error in returnWebpage', error);
+            this.logger.error('Ошибка в returnWebpage', error);
 
             res.socket?.destroy();
             return;
@@ -176,10 +176,10 @@ export class RootService {
         createdAt: Date;
     } | null> {
         const token = shortUuid;
-        this.logger.debug(`Verifying token: ${token}`);
+        this.logger.debug(`Проверка токена: ${token}`);
 
         if (!token || token.length < 10) {
-            this.logger.debug(`Token too short: ${token}`);
+            this.logger.debug(`Токен слишком короткий: ${token}`);
             return null;
         }
 
@@ -191,7 +191,7 @@ export class RootService {
                 });
 
                 if (payload.access !== 'subscription') {
-                    throw new Error('JWT access field is not subscription');
+                    throw new Error('Поле доступа JWT не равно subscription');
                 }
 
                 const jwtCreatedAt = new Date(payload.iat * 1000);
@@ -200,27 +200,27 @@ export class RootService {
                     return null;
                 }
 
-                this.logger.debug(`JWT verified successfully, ${JSON.stringify(payload)}`);
+                this.logger.debug(`JWT успешно проверен, ${JSON.stringify(payload)}`);
 
                 return {
                     username: payload.sub,
                     createdAt: jwtCreatedAt,
                 };
             } catch (err) {
-                this.logger.debug(`JWT verification failed: ${err}`);
+                this.logger.debug(`Ошибка проверки JWT: ${err}`);
             }
         }
 
         const uToken = token.slice(0, token.length - 10);
         const uSignature = token.slice(token.length - 10);
 
-        this.logger.debug(`Token parts: base: ${uToken}, signature: ${uSignature}`);
+        this.logger.debug(`Части токена: основа: ${uToken}, подпись: ${uSignature}`);
 
         let decoded: string;
         try {
             decoded = Buffer.from(uToken, 'base64url').toString();
         } catch (err) {
-            this.logger.debug(`Base64 decode error: ${err}`);
+            this.logger.debug(`Ошибка декодирования base64: ${err}`);
             return null;
         }
 
@@ -230,16 +230,16 @@ export class RootService {
 
         const expectedSignature = Buffer.from(digest).toString('base64url').slice(0, 10);
 
-        this.logger.debug(`Expected signature: ${expectedSignature}, actual: ${uSignature}`);
+        this.logger.debug(`Ожидаемая подпись: ${expectedSignature}, фактическая: ${uSignature}`);
 
         if (uSignature !== expectedSignature) {
-            this.logger.debug('Signature mismatch');
+            this.logger.debug('Несовпадение подписи');
             return null;
         }
 
         const parts = decoded.split(',');
         if (parts.length < 2) {
-            this.logger.debug(`Invalid token format: ${decoded}`);
+            this.logger.debug(`Неверный формат токена: ${decoded}`);
             return null;
         }
 
@@ -247,7 +247,7 @@ export class RootService {
         const createdAtInt = parseInt(parts[1], 10);
 
         if (isNaN(createdAtInt)) {
-            this.logger.debug(`Invalid created_at timestamp: ${parts[1]}`);
+            this.logger.debug(`Неверный таймстамп created_at: ${parts[1]}`);
             return null;
         }
 
@@ -257,7 +257,7 @@ export class RootService {
             return null;
         }
 
-        this.logger.debug(`Token decoded. Username: ${username}, createdAt: ${createdAt}`);
+        this.logger.debug(`Токен декодирован. Имя пользователя: ${username}, дата создания: ${createdAt}`);
 
         return {
             username,
@@ -277,11 +277,11 @@ export class RootService {
         const validFromDate = new Date(validFrom);
         if (createdAt < validFromDate) {
             this.logger.debug(
-                `createdAt JWT: ${createdAt.toISOString()} is before validFrom: ${validFromDate.toISOString()}`,
+                `createdAt JWT: ${createdAt.toISOString()} раньше validFrom: ${validFromDate.toISOString()}`,
             );
 
             this.logger.warn(
-                `${JSON.stringify({ username, createdAt })} – subscription createdAt is before validFrom`,
+                `${JSON.stringify({ username, createdAt })} – дата создания подписки раньше validFrom`,
             );
 
             return false;

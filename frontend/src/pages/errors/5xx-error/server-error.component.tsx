@@ -14,13 +14,13 @@ export function ErrorPageComponent() {
         <div className={classes.root}>
             <Container>
                 <div className={classes.label}>500</div>
-                <Title className={classes.title}>Something bad just happened...</Title>
+                <Title className={classes.title}>Что-то пошло не так...</Title>
                 <Text className={classes.description} size="lg" ta="center">
-                    Try to refresh the page.
+                    Попробуйте обновить страницу.
                 </Text>
                 <Group justify="center">
                     <Button onClick={handleRefresh} size="md" variant="outline">
-                        Refresh the page
+                        Обновить страницу
                     </Button>
                 </Group>
             </Container>

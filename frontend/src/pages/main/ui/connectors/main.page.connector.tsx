@@ -24,7 +24,7 @@ export const MainPageConnector = () => {
                 )
                 setAppsConfig(config)
             } catch (error) {
-                consola.error('Failed to fetch app config:', error)
+                consola.error('Не удалось загрузить конфигурацию приложения:', error)
             } finally {
                 setIsLoading(false)
             }

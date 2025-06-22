@@ -133,13 +133,13 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                         }
                         title={getStepTitle(
                             selectedApp.additionalBeforeAddSubscriptionStep,
-                            'Additional step title is not set'
+                            'Дополнительный шаг не задан'
                         )}
                     >
                         <Text c="dimmed" mb={16} size="sm" style={{ whiteSpace: 'pre-line' }}>
                             {selectedApp.additionalBeforeAddSubscriptionStep.description[
                                 currentLang
-                            ] || selectedApp.additionalBeforeAddSubscriptionStep.description.en}
+                                ] || selectedApp.additionalBeforeAddSubscriptionStep.description.en}
                         </Text>
                         <Group>
                             {selectedApp.additionalBeforeAddSubscriptionStep.buttons.map(
@@ -170,7 +170,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                     <Text c="dimmed" mb={16} size="sm" style={{ whiteSpace: 'pre-line' }}>
                         {selectedApp
                             ? getAppDescription(selectedApp, 'addSubscriptionStep')
-                            : 'Add subscription description is not set'}
+                            : 'Описание добавления подписки не задано'}
                     </Text>
                     {selectedApp && (
                         <Button
@@ -196,13 +196,13 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                         }
                         title={getStepTitle(
                             selectedApp.additionalAfterAddSubscriptionStep,
-                            'Additional step title is not set'
+                            'Дополнительный шаг не задан'
                         )}
                     >
                         <Text c="dimmed" mb={16} size="sm" style={{ whiteSpace: 'pre-line' }}>
                             {selectedApp.additionalAfterAddSubscriptionStep.description[
                                 currentLang
-                            ] || selectedApp.additionalAfterAddSubscriptionStep.description.en}
+                                ] || selectedApp.additionalAfterAddSubscriptionStep.description.en}
                         </Text>
                         <Group>
                             {selectedApp.additionalAfterAddSubscriptionStep.buttons.map(
@@ -233,7 +233,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                     <Text c="dimmed" size="sm" style={{ whiteSpace: 'pre-line' }}>
                         {selectedApp
                             ? getAppDescription(selectedApp, 'connectAndUseStep')
-                            : 'Connect and use description is not set'}
+                            : 'Описание подключения и использования не задано'}
                     </Text>
                 </Timeline.Item>
             </Timeline>

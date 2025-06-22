@@ -32,7 +32,7 @@ export const configSchema = z
         ) {
             ctx.addIssue({
                 code: z.ZodIssueCode.custom,
-                message: 'AURA_PANEL_URL must start with http:// or https://',
+                message: 'AURA_PANEL_URL должен начинаться с http:// или https://',
                 path: ['AURA_PANEL_URL'],
             });
         }
@@ -41,14 +41,14 @@ export const configSchema = z
                 ctx.addIssue({
                     code: z.ZodIssueCode.custom,
                     message:
-                        'MARZBAN_LEGACY_SECRET_KEY is required when MARZBAN_LEGACY_LINK_ENABLED is true',
+                        'MARZBAN_LEGACY_SECRET_KEY обязателен, когда MARZBAN_LEGACY_LINK_ENABLED установлен в true',
                 });
             }
             if (!data.AURA_API_TOKEN) {
                 ctx.addIssue({
                     code: z.ZodIssueCode.custom,
                     message:
-                        'AURA_API_TOKEN is required when MARZBAN_LEGACY_LINK_ENABLED is true',
+                        'AURA_API_TOKEN обязателен, когда MARZBAN_LEGACY_LINK_ENABLED установлен в true',
                 });
             }
         }

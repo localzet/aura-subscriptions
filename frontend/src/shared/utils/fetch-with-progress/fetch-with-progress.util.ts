@@ -17,7 +17,7 @@ export const fetchWithProgress = async (url: string, onProgress?: (progress: num
 
         return response.data
     } catch (error) {
-        consola.error('Download failed:', error)
+        consola.error('Ошибка загрузки:', error)
         throw error
     }
 }

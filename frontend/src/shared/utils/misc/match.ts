@@ -1,9 +1,9 @@
 import invariant from 'tiny-invariant'
 
 /**
- * PHP like match function
- * @param conditions - Array of [condition, value]
- * @returns Value of first met condition
+ * Функция сопоставления, как в PHP
+ * @param conditions - Массив [условие, значение]
+ * @returns Значение первого выполненного условия
  * @example
  * ```tsx
  * const value = match(
@@ -15,6 +15,6 @@ import invariant from 'tiny-invariant'
  */
 export function match<T>(...conditions: Array<[boolean, T]>) {
     const foundedCondition = conditions.find(([condition]) => condition) ?? conditions.at(-1)
-    invariant(foundedCondition, 'No conditions have been met')
+    invariant(foundedCondition, 'Не выполнено ни одного условия')
     return foundedCondition[1]
 }

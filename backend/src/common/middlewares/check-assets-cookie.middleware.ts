@@ -10,14 +10,14 @@ export function checkAssetsCookieMiddleware(req: Request, res: Response, next: N
         const secret = process.env.INTERNAL_JWT_SECRET;
 
         if (!secret) {
-            logger.error('INTERNAL_JWT_SECRET is not set');
+            logger.error('INTERNAL_JWT_SECRET не установлен');
             res.socket?.destroy();
 
             return;
         }
 
         if (!req.cookies.session) {
-            logger.debug('No session cookie found');
+            logger.debug('Кука сессии не найдена');
             res.socket?.destroy();
 
             return;

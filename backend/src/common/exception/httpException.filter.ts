@@ -18,7 +18,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         let errorMessage: string | string[];
         let errorCode: string = 'E000';
         if (status === HttpStatus.FORBIDDEN) {
-            errorMessage = 'Forbidden';
+            errorMessage = 'Доступ запрещён';
         } else {
             errorMessage = exception.message;
             if (exception instanceof HttpExceptionWithErrorCodeType) {

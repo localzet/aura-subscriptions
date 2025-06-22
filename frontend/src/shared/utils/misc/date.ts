@@ -18,7 +18,7 @@ export function formatRelativeDate(value: CustomDate | Date | string) {
     return date(value).fromNow()
 }
 
-/** Validate and transform date string to dayjs instance */
+/** Проверка и преобразование строки даты в экземпляр dayjs */
 export const dateSchema = z.custom<CustomDate>((value) => {
     if (
         value instanceof Date ||
@@ -28,5 +28,5 @@ export const dateSchema = z.custom<CustomDate>((value) => {
         return date(value)
     }
 
-    throw new Error('Invalid date format')
+    throw new Error('Недопустимый формат даты')
 })

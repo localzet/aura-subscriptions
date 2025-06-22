@@ -12,7 +12,7 @@ import {
     GetSubscriptionInfoByShortUuidCommand,
     GetUserByUsernameCommand,
     TRequestTemplateTypeKeys,
-} from '@localzet/aura-backend-contract';
+} from '@localzet/aura-contract';
 
 import { ICommandResponse } from '../types/command-response.type';
 
@@ -55,13 +55,13 @@ export class AxiosService {
             };
         } catch (error) {
             if (error instanceof AxiosError) {
-                this.logger.error('Error in Axios GetUserByUsername Request:', error.message);
+                this.logger.error('Ошибка при запросе GetUserByUsername в Axios:', error.message);
 
                 return {
                     isOk: false,
                 };
             } else {
-                this.logger.error('Error in GetUserByUsername Request:', error);
+                this.logger.error('Ошибка при запросе GetUserByUsername:', error);
 
                 return {
                     isOk: false,
@@ -86,9 +86,9 @@ export class AxiosService {
             };
         } catch (error) {
             if (error instanceof AxiosError) {
-                this.logger.error('Error in GetSubscriptionInfo Request:', error.message);
+                this.logger.error('Ошибка при запросе GetSubscriptionInfo:', error.message);
             } else {
-                this.logger.error('Error in GetSubscriptionInfo Request:', error);
+                this.logger.error('Ошибка при запросе GetSubscriptionInfo:', error);
             }
 
             return { isOk: false };
@@ -123,9 +123,9 @@ export class AxiosService {
             };
         } catch (error) {
             if (error instanceof AxiosError) {
-                this.logger.error('Error in GetSubscription Request:', error.message);
+                this.logger.error('Ошибка при запросе GetSubscription:', error.message);
             } else {
-                this.logger.error('Error in GetSubscription Request:', error);
+                this.logger.error('Ошибка при запросе GetSubscription:', error);
             }
 
             return null;

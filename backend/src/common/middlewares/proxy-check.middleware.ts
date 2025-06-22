@@ -20,7 +20,7 @@ export function proxyCheckMiddleware(req: Request, res: Response, next: NextFunc
 
     if (!isHttps || !isProxy) {
         res.socket?.destroy();
-        logger.error('Reverse proxy and HTTPS are required.');
+        logger.error('Требуется обратный прокси и HTTPS.');
         return;
     }
 

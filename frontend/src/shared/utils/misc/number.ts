@@ -30,7 +30,7 @@ export function formatDecimal(value: number | string, options?: FormatterOptions
 
     if (Number.isNaN(currentValue)) {
         throw new Error(
-            'Invalid value. Please provide a valid number or string representation of a number.'
+            'Недопустимое значение. Пожалуйста, введите корректное число или строковое представление числа.'
         )
     }
 

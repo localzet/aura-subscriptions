@@ -5,7 +5,7 @@ import { Get, Controller, Res, Req, Param, Logger } from '@nestjs/common';
 import {
     REQUEST_TEMPLATE_TYPE_VALUES,
     TRequestTemplateTypeKeys,
-} from '@localzet/aura-backend-contract';
+} from '@localzet/aura-contract';
 
 import { RootService } from './root.service';
 
@@ -31,7 +31,7 @@ export class RootController {
         }
 
         if (!REQUEST_TEMPLATE_TYPE_VALUES.includes(clientType as TRequestTemplateTypeKeys)) {
-            this.logger.error(`Invalid client type: ${clientType}`);
+            this.logger.error(`Недопустимый тип клиента: ${clientType}`);
 
             response.socket?.destroy();
             return;

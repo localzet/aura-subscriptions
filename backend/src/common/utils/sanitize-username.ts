@@ -1,24 +1,24 @@
 export function sanitizeUsername(username: string): string {
-    // Define regex pattern for valid characters
+    // Определяем шаблон для допустимых символов
     const validPattern = /^[a-zA-Z0-9_-]+$/;
 
-    // Create an array to store valid characters
+    // Создаем массив для допустимых символов
     const sanitized: string[] = [];
 
-    // Keep only valid characters
+    // Оставляем только допустимые символы
     for (const char of username) {
         if (validPattern.test(char)) {
             sanitized.push(char);
         } else {
-            // Replace invalid characters with underscore
+            // Заменяем недопустимые символы на подчеркивание
             sanitized.push('_');
         }
     }
 
-    // Get the sanitized username
+    // Получаем очищенное имя пользователя
     let result = sanitized.join('');
 
-    // Ensure minimum length of 6 characters
+    // Обеспечиваем минимальную длину в 6 символов
     if (result.length < 6) {
         result = result + '_'.repeat(6 - result.length);
     }
