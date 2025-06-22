@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: 'aura-subscriptions',
-            script: 'dist/src/main.js',
+            script: 'dist/main.js',
             watch: false,
             instances: process.env.SUBSCRIPTION_PAGE_INSTANCES || 1,
             merge_logs: true,
