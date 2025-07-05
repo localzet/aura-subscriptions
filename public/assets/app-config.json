@@ -245,9 +245,107 @@
   ],
   "pc": [
     {
+      "id": "v2raytun",
+      "name": "V2RayTun",
+      "isFeatured": true,
+      "urlScheme": "v2raytun://import/",
+      "installationStep": {
+        "buttons": [
+          {
+            "buttonLink": "https://storage.v2raytun.com/v2RayTun_Setup.exe",
+            "buttonText": {
+              "en": "Windows",
+              "fa": "ویندوز",
+              "ru": "Windows"
+            }
+          },
+          {
+            "buttonLink": "https://apps.apple.com/en/app/v2raytun/id6476628951",
+            "buttonText": {
+              "en": "MacOS",
+              "fa": "مک",
+              "ru": "MacOS"
+            }
+          }
+        ],
+        "description": {
+          "en": "Choose the version for your device, click the button below and install the app.",
+          "fa": "نسخه مناسب برای دستگاه خود را انتخاب کنید، دکمه زیر را فشار دهید و برنامه را نصب کنید",
+          "ru": "Выберите подходящую версию для вашего устройства, нажмите на кнопку ниже и установите приложение."
+        }
+      },
+      "addSubscriptionStep": {
+        "description": {
+          "en": "Click the button below to add subscription",
+          "fa": "برای افزودن اشتراک روی دکمه زیر کلیک کنید",
+          "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
+        }
+      },
+      "connectAndUseStep": {
+        "description": {
+          "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, choose another server from the server list.",
+          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. فراموش نکنید که یک سرور را از لیست سرورها انتخاب کنید. در صورت نیاز، سرور دیگری را از لیست سرورها انتخاب کنید.",
+          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
+        }
+      }
+    },
+    {
+      "id": "hiddify",
+      "name": "Hiddify",
+      "isFeatured": false,
+      "urlScheme": "hiddify://import/",
+      "installationStep": {
+        "buttons": [
+          {
+            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Windows-Setup-x64.exe",
+            "buttonText": {
+              "en": "Windows",
+              "fa": "ویندوز",
+              "ru": "Windows"
+            }
+          },
+          {
+            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-MacOS.dmg",
+            "buttonText": {
+              "en": "MacOS",
+              "fa": "مک",
+              "ru": "MacOS"
+            }
+          },
+          {
+            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Linux-x64.AppImage",
+            "buttonText": {
+              "en": "Linux",
+              "fa": "لینوکس",
+              "ru": "Linux"
+            }
+          }
+        ],
+        "description": {
+          "en": "In the main section, click the large power button in the center to connect to VPN. If needed, select a different server in the Proxy section",
+          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. در صورت نیاز، سرور دیگری را در بخش پروکسی انتخاب کنید",
+          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. При необходимости выберите другой сервер в разделе Прокси."
+        }
+      },
+      "addSubscriptionStep": {
+        "description": {
+          "en": "Click the button below to add subscription",
+          "fa": "برای افزودن اشتراک روی دکمه زیر کلیک کنید",
+          "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
+        }
+      },
+      "connectAndUseStep": {
+        "description": {
+          "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, select a different server from the server list.",
+          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. فراموش نکنید که یک سرور را از لیست سرورها انتخاب کنید. در صورت نیاز، سرور دیگری را از لیست سرورها انتخاب کنید.",
+          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
+        }
+      }
+    },
+    {
       "id": "clash-verge",
       "name": "Clash Verge",
-      "isFeatured": true,
+      "isFeatured": false,
       "urlScheme": "clash://install-config?url=",
       "installationStep": {
         "buttons": [
@@ -262,17 +360,17 @@
           {
             "buttonLink": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_x64.dmg",
             "buttonText": {
-              "en": "macOS (Intel)",
+              "en": "MacOS (Intel)",
               "fa": "مک (اینتل)",
-              "ru": "macOS (Intel)"
+              "ru": "MacOS (Intel)"
             }
           },
           {
             "buttonLink": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.2/Clash.Verge_2.2.2_aarch64.dmg",
             "buttonText": {
-              "en": "macOS (Apple Silicon)",
+              "en": "MacOS (Apple Silicon)",
               "fa": "مک (Apple Silicon)",
-              "ru": "macOS (Apple Silicon)"
+              "ru": "MacOS (Apple Silicon)"
             }
           },
           {
@@ -328,59 +426,6 @@
           "en": "You can select a server in the Proxy section, and enable VPN in the Settings section. Set the TUN Mode switch to ON.",
           "fa": "می‌توانید در بخش پروکسی سرور را انتخاب کنید و در بخش تنظیمات VPN را فعال کنید. کلید TUN Mode را در حالت روشن قرار دهید.",
           "ru": "Выбрать сервер можно в разделе Прокси, включить VPN можно в разделе Настройки. Установите переключатель TUN Mode в положение ВКЛ."
-        }
-      }
-    },
-    {
-      "id": "hiddify",
-      "name": "Hiddify",
-      "isFeatured": false,
-      "urlScheme": "hiddify://import/",
-      "installationStep": {
-        "buttons": [
-          {
-            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Windows-Setup-x64.exe",
-            "buttonText": {
-              "en": "Windows",
-              "fa": "ویندوز",
-              "ru": "Windows"
-            }
-          },
-          {
-            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-MacOS.dmg",
-            "buttonText": {
-              "en": "macOS",
-              "fa": "مک",
-              "ru": "macOS"
-            }
-          },
-          {
-            "buttonLink": "https://github.com/hiddify/hiddify-app/releases/download/v2.5.7/Hiddify-Linux-x64.AppImage",
-            "buttonText": {
-              "en": "Linux",
-              "fa": "لینوکس",
-              "ru": "Linux"
-            }
-          }
-        ],
-        "description": {
-          "en": "In the main section, click the large power button in the center to connect to VPN. If needed, select a different server in the Proxy section",
-          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. در صورت نیاز، سرور دیگری را در بخش پروکسی انتخاب کنید",
-          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. При необходимости выберите другой сервер в разделе Прокси."
-        }
-      },
-      "addSubscriptionStep": {
-        "description": {
-          "en": "Click the button below to add subscription",
-          "fa": "برای افزودن اشتراک روی دکمه زیر کلیک کنید",
-          "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
-        }
-      },
-      "connectAndUseStep": {
-        "description": {
-          "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, select a different server from the server list.",
-          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. فراموش نکنید که یک سرور را از لیست سرورها انتخاب کنید. در صورت نیاز، سرور دیگری را از لیست سرورها انتخاب کنید.",
-          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
         }
       }
     }
