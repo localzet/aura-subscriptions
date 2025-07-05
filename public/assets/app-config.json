@@ -1,6 +1,44 @@
 {
   "ios": [
     {
+      "id": "v2raytun",
+      "name": "V2RayTun",
+      "isFeatured": true,
+      "urlScheme": "v2raytun://import/",
+      "installationStep": {
+        "buttons": [
+          {
+            "buttonLink": "https://apps.apple.com/ru/app/v2raytun/id6476628951",
+            "buttonText": {
+              "en": "Open in App Store",
+              "fa": "باز کردن در App Store",
+              "ru": "Открыть в App Store"
+            }
+          }
+        ],
+        "description": {
+          "en": "Open the page in App Store and install the app. Launch it, in the VPN configuration permission window click Allow and enter your passcode.",
+          "fa": "صفحه را در App Store باز کنید و برنامه را نصب کنید. آن را اجرا کنید، در پنجره مجوز پیکربندی VPN روی Allow کلیک کنید و رمز عبور خود را وارد کنید.",
+          "ru": "Откройте страницу в App Store и установите приложение. Запустите его, в окне разрешения VPN-конфигурации нажмите Allow и введите свой пароль."
+        }
+      },
+      "addSubscriptionStep": {
+        "description": {
+          "en": "Click the button below — the app will open and the subscription will be added automatically",
+          "fa": "برای افزودن خودکار اشتراک روی دکمه زیر کلیک کنید - برنامه باز خواهد شد",
+          "ru": "Нажмите кнопку ниже — приложение откроется, и подписка добавится автоматически."
+        }
+      },
+      "connectAndUseStep": {
+        "description": {
+          "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, choose another server from the server list.",
+          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. فراموش نکنید که یک سرور را از لیست سرورها انتخاب کنید. در صورت نیاز، سرور دیگری را از لیست سرورها انتخاب کنید.",
+          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
+        }
+      },
+      "isNeedBase64Encoding": false
+    },
+    {
       "id": "happ",
       "name": "Happ",
       "isFeatured": false,
@@ -73,45 +111,9 @@
           "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
         }
       }
-    },
-    {
-      "id": "shadowrocket",
-      "name": "Shadowrocket",
-      "isFeatured": false,
-      "urlScheme": "sub://",
-      "isNeedBase64Encoding": true,
-      "installationStep": {
-        "buttons": [
-          {
-            "buttonLink": "https://apps.apple.com/ru/app/shadowrocket/id932747118",
-            "buttonText": {
-              "en": "Open in App Store",
-              "fa": "باز کردن در App Store",
-              "ru": "Открыть в App Store"
-            }
-          }
-        ],
-        "description": {
-          "en": "Open the page in App Store and install the app. Launch it, in the VPN configuration permission window click Allow and enter your passcode.",
-          "fa": "صفحه را در App Store باز کنید و برنامه را نصب کنید. آن را اجرا کنید، در پنجره مجوز پیکربندی VPN روی Allow کلیک کنید و رمز عبور خود را وارد کنید.",
-          "ru": "Откройте страницу в App Store и установите приложение. Запустите его, в окне разрешения VPN-конфигурации нажмите Allow и введите свой пароль."
-        }
-      },
-      "addSubscriptionStep": {
-        "description": {
-          "en": "Click the button below — the app will open and the subscription will be added automatically",
-          "fa": "برای افزودن خودکار اشتراک روی دکمه زیر کلیک کنید - برنامه باز خواهد شد",
-          "ru": "Нажмите кнопку ниже — приложение откроется, и подписка добавится автоматически."
-        }
-      },
-      "connectAndUseStep": {
-        "description": {
-          "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, choose another server from the server list.",
-          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. فراموش نکنید که یک سرور را از لیست سرورها انتخاب کنید. در صورت نیاز، سرور دیگری را از لیست سرورها انتخاب کنید.",
-          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
-        }
-      }
-    },
+    }
+  ],
+  "android": [
     {
       "id": "v2raytun",
       "name": "V2RayTun",
@@ -120,25 +122,25 @@
       "installationStep": {
         "buttons": [
           {
-            "buttonLink": "https://apps.apple.com/ru/app/v2raytun/id6476628951",
+            "buttonLink": "https://play.google.com/store/apps/details?id=com.v2raytun.android",
             "buttonText": {
-              "en": "Open in App Store",
-              "fa": "باز کردن در App Store",
-              "ru": "Открыть в App Store"
+              "en": "Open in Google Play",
+              "fa": "باز کردن در Google Play",
+              "ru": "Открыть в Google Play"
             }
           }
         ],
         "description": {
-          "en": "Open the page in App Store and install the app. Launch it, in the VPN configuration permission window click Allow and enter your passcode.",
-          "fa": "صفحه را در App Store باز کنید و برنامه را نصب کنید. آن را اجرا کنید، در پنجره مجوز پیکربندی VPN روی Allow کلیک کنید و رمز عبور خود را وارد کنید.",
-          "ru": "Откройте страницу в App Store и установите приложение. Запустите его, в окне разрешения VPN-конфигурации нажмите Allow и введите свой пароль."
+          "en": "Open the page in Google Play and install the app. Or install the app directly from the APK file if Google Play is not working.",
+          "fa": "صفحه را در Google Play باز کنید و برنامه را نصب کنید. یا برنامه را مستقیماً از فایل APK نصب کنید، اگر Google Play کار نمی کند.",
+          "ru": "Откройте страницу в Google Play и установите приложение. Или установите приложение из APK файла напрямую, если Google Play не работает."
         }
       },
       "addSubscriptionStep": {
         "description": {
-          "en": "Click the button below — the app will open and the subscription will be added automatically",
-          "fa": "برای افزودن خودکار اشتراک روی دکمه زیر کلیک کنید - برنامه باز خواهد شد",
-          "ru": "Нажмите кнопку ниже — приложение откроется, и подписка добавится автоматически."
+          "en": "Click the button below to add subscription",
+          "fa": "برای افزودن اشتراک روی دکمه زیر کلیک کنید",
+          "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
         }
       },
       "connectAndUseStep": {
@@ -148,10 +150,8 @@
           "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
         }
       },
-      "isNeedBase64Encoding": true
-    }
-  ],
-  "android": [
+      "isNeedBase64Encoding": false
+    },
     {
       "id": "happ",
       "name": "Happ",
@@ -241,44 +241,6 @@
           "ru": "Откройте Clash Meta и нажмите Подключиться"
         }
       }
-    },
-    {
-      "id": "v2raytun",
-      "name": "V2RayTun",
-      "isFeatured": true,
-      "urlScheme": "v2raytun://import/",
-      "installationStep": {
-        "buttons": [
-          {
-            "buttonLink": "https://play.google.com/store/apps/details?id=com.v2raytun.android",
-            "buttonText": {
-              "en": "Open in Google Play",
-              "fa": "باز کردن در Google Play",
-              "ru": "Открыть в Google Play"
-            }
-          }
-        ],
-        "description": {
-          "en": "Open the page in Google Play and install the app. Or install the app directly from the APK file if Google Play is not working.",
-          "fa": "صفحه را در Google Play باز کنید و برنامه را نصب کنید. یا برنامه را مستقیماً از فایل APK نصب کنید، اگر Google Play کار نمی کند.",
-          "ru": "Откройте страницу в Google Play и установите приложение. Или установите приложение из APK файла напрямую, если Google Play не работает."
-        }
-      },
-      "addSubscriptionStep": {
-        "description": {
-          "en": "Click the button below to add subscription",
-          "fa": "برای افزودن اشتراک روی دکمه زیر کلیک کنید",
-          "ru": "Нажмите кнопку ниже, чтобы добавить подписку"
-        }
-      },
-      "connectAndUseStep": {
-        "description": {
-          "en": "In the main section, click the large power button in the center to connect to VPN. Don't forget to select a server from the server list. If needed, choose another server from the server list.",
-          "fa": "در بخش اصلی، دکمه بزرگ روشن/خاموش در مرکز را برای اتصال به VPN کلیک کنید. فراموش نکنید که یک سرور را از لیست سرورها انتخاب کنید. در صورت نیاز، سرور دیگری را از لیست سرورها انتخاب کنید.",
-          "ru": "В главном разделе нажмите большую кнопку включения в центре для подключения к VPN. Не забудьте выбрать сервер в списке серверов. При необходимости выберите другой сервер из списка серверов."
-        }
-      },
-      "isNeedBase64Encoding": true
     }
   ],
   "pc": [
