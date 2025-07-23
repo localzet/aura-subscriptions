@@ -98,7 +98,7 @@ export class AxiosService {
     public async getSubscription(
         shortUuid: string,
         headers: NodeJS.Dict<string | string[]>,
-        withClientType: boolean = false,
+        withClientType = false,
         clientType?: TRequestTemplateTypeKeys,
     ): Promise<{
         response: unknown;

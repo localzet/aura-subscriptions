@@ -3,7 +3,7 @@ import xbytes from 'xbytes'
 
 export function prettyBytesToAnyUtil(
     bytesInput: number | string | undefined,
-    returnZero: boolean = false
+    returnZero = false
 ): string | undefined {
     if (!bytesInput) {
         return returnZero ? '0' : undefined
@@ -19,7 +19,7 @@ export function prettyBytesToAnyUtil(
 
 export function prettyBytesUtil(
     bytesInput: number | string | undefined,
-    returnZero: boolean = false
+    returnZero = false
 ): string | undefined {
     if (!bytesInput) {
         return returnZero ? '0' : undefined
@@ -35,7 +35,7 @@ export function prettyBytesUtil(
 
 export function prettyBytesUtilWithoutPrefix(
     bytesInput: number | string | undefined,
-    returnZero: boolean = false
+    returnZero = false
 ): string | undefined {
     if (!bytesInput) {
         return returnZero ? '0' : undefined
