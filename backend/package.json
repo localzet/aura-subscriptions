@@ -37,7 +37,7 @@
     "@nestjs/platform-express": "^11.1.5",
     "@nestjs/serve-static": "5.0.3",
     "@supercharge/request-ip": "^1.2.0",
-    "axios": "^1.9.0",
+    "axios": "^1.11.0",
     "class-transformer": "^0.5.1",
     "compression": "^1.8.0",
     "consola": "^3.4.2",
