@@ -124,7 +124,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                     {selectedApp && renderFirstStepButton(selectedApp)}
                 </Timeline.Item>
 
-                {selectedApp && selectedApp.additionalBeforeAddSubscriptionStep && (
+                {selectedApp?.additionalBeforeAddSubscriptionStep && (
                     <Timeline.Item
                         bullet={
                             <ThemeIcon color="teal.5" radius="xl" size={26}>
@@ -139,7 +139,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                         <Text c="dimmed" mb={16} size="sm" style={{ whiteSpace: 'pre-line' }}>
                             {selectedApp.additionalBeforeAddSubscriptionStep.description[
                                 currentLang
-                                ] || selectedApp.additionalBeforeAddSubscriptionStep.description.en}
+                            ] || selectedApp.additionalBeforeAddSubscriptionStep.description.en}
                         </Text>
                         <Group>
                             {selectedApp.additionalBeforeAddSubscriptionStep.buttons.map(
@@ -187,7 +187,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                     )}
                 </Timeline.Item>
 
-                {selectedApp && selectedApp.additionalAfterAddSubscriptionStep && (
+                {selectedApp?.additionalAfterAddSubscriptionStep && (
                     <Timeline.Item
                         bullet={
                             <ThemeIcon color="teal.5" radius="xl" size={26}>
@@ -202,7 +202,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                         <Text c="dimmed" mb={16} size="sm" style={{ whiteSpace: 'pre-line' }}>
                             {selectedApp.additionalAfterAddSubscriptionStep.description[
                                 currentLang
-                                ] || selectedApp.additionalAfterAddSubscriptionStep.description.en}
+                            ] || selectedApp.additionalAfterAddSubscriptionStep.description.en}
                         </Text>
                         <Group>
                             {selectedApp.additionalAfterAddSubscriptionStep.buttons.map(
