@@ -72,7 +72,7 @@ module.exports = {
 
         /* ******* Entity and table names ******* */
         entitiesFolderName() {
-            return `entities`;
+            return "entities";
         },
 
         TableName(name) {
@@ -90,7 +90,7 @@ module.exports = {
 
         /* ******* Dtos ******* */
         dtosFolderName() {
-            return `dto`;
+            return "dto";
         },
 
         ResponseDtoName(name) {
