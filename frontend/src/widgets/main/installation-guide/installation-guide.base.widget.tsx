@@ -124,7 +124,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                     {selectedApp && renderFirstStepButton(selectedApp)}
                 </Timeline.Item>
 
-                {selectedApp && selectedApp.additionalBeforeAddSubscriptionStep && (
+                {selectedApp?.additionalBeforeAddSubscriptionStep && (
                     <Timeline.Item
                         bullet={
                             <ThemeIcon color="teal.5" radius="xl" size={26}>
@@ -187,7 +187,7 @@ export const BaseInstallationGuideWidget = (props: IBaseGuideProps) => {
                     )}
                 </Timeline.Item>
 
-                {selectedApp && selectedApp.additionalAfterAddSubscriptionStep && (
+                {selectedApp?.additionalAfterAddSubscriptionStep && (
                     <Timeline.Item
                         bullet={
                             <ThemeIcon color="teal.5" radius="xl" size={26}>
