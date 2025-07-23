@@ -2,10 +2,7 @@ import { Request, Response } from 'express';
 
 import { Get, Controller, Res, Req, Param, Logger } from '@nestjs/common';
 
-import {
-    REQUEST_TEMPLATE_TYPE_VALUES,
-    TRequestTemplateTypeKeys,
-} from '@localzet/aura-contract';
+import { REQUEST_TEMPLATE_TYPE_VALUES, TRequestTemplateTypeKeys } from '@localzet/aura-contract';
 
 import { RootService } from './root.service';
 
