@@ -79,7 +79,7 @@ export class RootService {
             subscriptionDataResponse = await this.axiosService.getSubscription(
                 shortUuidLocal,
                 req.headers,
-                !!clientType,
+                Boolean(clientType),
                 clientType,
             );
 
