@@ -79,7 +79,7 @@ export class RootService {
             subscriptionDataResponse = await this.axiosService.getSubscription(
                 shortUuidLocal,
                 req.headers,
-                !!clientType,
+                Boolean(clientType),
                 clientType,
             );
 
@@ -140,7 +140,9 @@ export class RootService {
             const subscriptionDataResponse = await this.axiosService.getSubscriptionInfo(shortUuid);
 
             if (!subscriptionDataResponse.isOk) {
-                this.logger.error(`Получение информации о подписке не удалось, shortUuid: ${shortUuid}`);
+                this.logger.error(
+                    `Получение информации о подписке не удалось, shortUuid: ${shortUuid}`,
+                );
 
                 res.socket?.destroy();
                 return;
@@ -257,7 +259,9 @@ export class RootService {
             return null;
         }
 
-        this.logger.debug(`Токен декодирован. Имя пользователя: ${username}, дата создания: ${createdAt}`);
+        this.logger.debug(
+            `Токен декодирован. Имя пользователя: ${username}, дата создания: ${createdAt}`,
+        );
 
         return {
             username,
